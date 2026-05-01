@@ -1,0 +1,1 @@
+select (select e.salary as SecondHighestSa from Employee e where e.salary<(select max(salary) from Employee) order by e.salary desc limit 1) as SecondHighestSalary;
